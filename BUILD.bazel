@@ -1,0 +1,11 @@
+load("@cython//Tools:rules.bzl", "pyx_library")
+
+cc_binary(
+    name = 'netree-t',
+    srcs = ['srcs/netree.cpp', 'srcs/netree.h', 'srcs/main.cpp'],
+)
+
+pyx_library(
+    name = 'netree',
+    srcs = ['srcs/netree.pyx', 'srcs/netree.h'],
+)
